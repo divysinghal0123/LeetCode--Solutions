@@ -20,7 +20,7 @@ public:
 
 class Solution {
 public:
-    void pre(Node* root,vector<int> &ans)
+   void pre(Node* root,vector<int> &ans)
     {
         if(root == NULL){
             return;
