@@ -11,22 +11,21 @@
  */
 class Solution {
 public:
-    void inorder(TreeNode* root,vector<int> &v){
-        
+    void inorder(vector<int> &v,TreeNode* root){
         if(root == NULL){
             return;
         }
-        inorder(root->left,v);
+        inorder(v,root->left);
         v.push_back(root->val);
-        inorder(root->right,v);
+        inorder(v,root->right);
     }
     bool isValidBST(TreeNode* root) {
         vector<int> v;
-        inorder(root,v);
-        
+        inorder(v,root);
         int i;
+        
         for(i=0;i<v.size()-1;i++){
-            if(v[i]>=v[i+1]){
+            if(v[i] >= v[i+1]){
                 return false;
             }
         }
