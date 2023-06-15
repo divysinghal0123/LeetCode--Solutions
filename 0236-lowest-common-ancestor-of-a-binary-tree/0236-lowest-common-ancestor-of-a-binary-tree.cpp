@@ -13,23 +13,23 @@ public:
         if(root == NULL){
             return root;
         }
-        if(p==root or q == root){
-            return root;
-        }
-        if(p == root->left and q == root->right){
+        if(p==root or q==root){
             return root;
         }
         if(p == root->right and q == root->left){
             return root;
         }
+        if(p == root->left and q == root->right){
+            return root;
+        }
         TreeNode* left = lowestCommonAncestor(root->left,p,q);
         TreeNode* right = lowestCommonAncestor(root->right,p,q);
         
+        if(right==NULL){
+            return left;
+        }
         if(left == NULL){
             return right;
-        }
-        if(right == NULL){
-            return left;
         }
         return root;
     }
