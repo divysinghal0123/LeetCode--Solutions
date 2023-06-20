@@ -8,8 +8,8 @@ public:
             ans.push_back(nums[i]);
         }
         sort(nums.begin(),nums.end());
-        for(i=0;i<n;i++){
-            nums[i] = nums[i];
-        }
+        // for(i=0;i<n;i++){
+        //     nums[i] = nums[i];
+        // }
     }
 };
