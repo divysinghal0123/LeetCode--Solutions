@@ -1,6 +1,10 @@
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
+        
+        
+        //LINEAR SEARCH ALGO
+        
         int n = nums.size();
         int i;
         for(i=0;i<n;i++){
